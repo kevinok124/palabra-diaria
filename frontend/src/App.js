@@ -1,12 +1,12 @@
 import React from "react";
-import Contador from './components/Contador';
+import Card from "./components/Card";
 
 function App() {
   return (
-    <div>
+    <div className="contenedor">
+       
+        <Card/>
       
-        <h1>HOLA MUNDO</h1>
-        <Contador/>
       
     </div>
   );
