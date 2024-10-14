@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "./components/Card";
-import Button from "./components/button";
+import Card from "./Components/Card";
+import Button from "./Components/button";
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
     </div>
 
     <div className="contenedorDos">
-        <Button text= "Random" />
-        <Button text= "Click" />
+        <Button text= "Random"/>
+        <Button text= "Click"/>
     </div></>
   );
 }
