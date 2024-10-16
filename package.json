@@ -12,6 +12,7 @@
   "author": "https://github.com/kevinok124 ",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.0.1",
+    "mongoose": "^8.7.1"
   }
 }
