@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
     "mongoose": "^8.7.1"
   }
 }
