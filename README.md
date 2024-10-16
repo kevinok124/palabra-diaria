@@ -1,74 +1,26 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+<h1>Palabra Diaria</h1>
+Palabra Diaria es una aplicación web que te proporciona versículos bíblicos diarios de manera aleatoria, ayudando a los usuarios a recibir inspiración y reflexionar sobre las Escrituras cada día. La aplicación está desarrollada en React para el frontend y Node.js para el backend, utilizando MongoDB Atlas como base de datos.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Características</h2>
+Versículos diarios: Obtén un versículo bíblico nuevo cada día de forma aleatoria.
+Filtro por libro: Busca versículos específicos de diferentes libros de la Biblia.
+Responsiva: La aplicación está optimizada para dispositivos móviles y escritorio.
+Autenticación: Permite a los usuarios iniciar sesión y personalizar su experiencia.
+Multilenguaje: Actualmente soporta versículos en español.
+Capturas de pantalla (Opcional)
+Aquí puedes añadir imágenes o gifs que muestren la funcionalidad de la aplicación para hacerla más visualmente atractiva.
 
-## Available Scripts
+<h2>Uso</h2>
+Visita la página principal para recibir un versículo bíblico diario.
+Navega por diferentes libros de la Biblia y busca pasajes específicos.
+Personaliza tu experiencia iniciando sesión y guardando tus versículos favoritos.
+Tecnologías Utilizadas
+Frontend: React.js, HTML5, CSS3
+Backend: Node.js, Express.js
+Base de Datos: MongoDB Atlas
 
-In the project directory, you can run:
 
-### `npm start`
+Contacto
+Si tienes alguna pregunta o sugerencia, no dudes en contactarnos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# palabra-diaria
->>>>>>> d01c1c7868d093f368be8f38b361b51f16e784f2
+Desarrollado por: Kevin Okulczyk y Sebastian Gallardo
