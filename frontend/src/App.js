@@ -1,18 +1,21 @@
-import React from "react";
-import Card from "./components/Card";
+import React, { Fragment } from "react";
 import Button from "./components/button";
+import Search from "./components/input";
+import Card from "./components/card";
+
 
 function App() {
   return (
-    <><div className="contenedor">
-      <Card />
-    </div>
+  <Fragment className="contenedor">
+    <Search/>
+    <Button text='click'/> 
+    <Card/>
+    
+  </Fragment>
 
-    <div className="contenedorDos">
-        <Button text= "Random"/>
-        <Button text= "Click"/>
-    </div></>
+
+    
   );
-}
+};
 
 export default App;
