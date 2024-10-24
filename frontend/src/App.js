@@ -1,20 +1,22 @@
-import React, { Fragment } from "react";
-import Button from "./components/button";
-import Search from "./components/input";
-import Card from "./components/card";
+import './index.css';
+
+
+
+import RandomItemPicker from "./components/randomItemPicker";
+import myData from "./Schema.json"
 
 
 function App() {
+
+
+
   return (
-  <Fragment className="contenedor">
-    <Search/>
-    <Button text='click'/> 
-    <Card/>
+ 
+    <div className="contenedor">
+      <RandomItemPicker data={myData}/>
+    </div>  
     
-  </Fragment>
 
-
-    
   );
 };
 
