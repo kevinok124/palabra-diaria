@@ -1,18 +1,23 @@
-import React from "react";
-import Card from "./components/Card";
-import Button from "./components/button";
+import './index.css';
+
+
+
+import RandomItemPicker from "./components/randomItemPicker";
+import myData from "./Schema.json"
+
 
 function App() {
-  return (
-    <><div className="contenedor">
-      <Card />
-    </div>
 
-    <div className="contenedorDos">
-        <Button text= "Random"/>
-        <Button text= "Click"/>
-    </div></>
+
+
+  return (
+ 
+    <div className="contenedor">
+      <RandomItemPicker data={myData}/>
+    </div>  
+    
+
   );
-}
+};
 
 export default App;

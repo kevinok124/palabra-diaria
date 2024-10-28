@@ -1,0 +1,32 @@
+[
+  {
+    "Index": 1,
+    "Testament": "Antiguo",
+    "Book": "Génesis",
+    "BoookNumber": 1,
+    "Verse": 1,
+    "Chapter": 1,
+    "Text": "En el principio creó Dios los cielos y la tierra.",
+    "Title": "La Creación"
+  },
+  {
+    "Index": 2,
+    "Testament": "Antiguo",
+    "Book": "Génesis",
+    "BoookNumber": 1,
+    "Verse": 2,
+    "Chapter": 1,
+    "Text": "Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas.",
+    "Title": "La Creación"
+  },
+  {
+    "Index": 3,
+    "Testament": "Antiguo",
+    "Book": "Génesis",
+    "BoookNumber": 1,
+    "Verse": 3,
+    "Chapter": 1,
+    "Text": "Y dijo Dios: Sea la luz;  y fue la luz.",
+    "Title": "La Creación"
+  }
+]
