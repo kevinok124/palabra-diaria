@@ -31,31 +31,31 @@ const RandomItemPicker = () => {
       {randomItem && (
         <div>
           <div className="card">
-            <div className="card-overlay" />
+       
             <div className="card-inner">
               {/* Aquí puedes mostrar las propiedades del elemento aleatorio */}
               <p>
-                <strong>numero: </strong>
+                <strong>Numero: </strong>
                 {randomItem.Index}
               </p>
               <p>
-                <strong>testamento: </strong>
+                <strong>Testamento: </strong>
                 {randomItem.Testament}
               </p>
               <p>
-                <strong>libro: </strong>
+                <strong>Libro: </strong>
                 {randomItem.Book}
               </p>
               <p>
-                <strong>numero de libro: </strong>
+                <strong>Numero de libro: </strong>
                 {randomItem.BoookNumber}
               </p>
               <p>
-                <strong>versiculo: </strong>
+                <strong>Versiculo: </strong>
                 {randomItem.Verse}
               </p>{" "}
               <p>
-                <strong>palabra diaria: </strong>
+                <strong>Palabra diaria: </strong>
                 {randomItem.Text}
               </p>
               {/* ... y así sucesivamente */}
@@ -65,7 +65,7 @@ const RandomItemPicker = () => {
       )}
 
       <button onClick={seleccionarElementoAleatorio}>
-        Obtener elemento aleatorio
+        Random
       </button>
       
     </div>

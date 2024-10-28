@@ -1,42 +1,47 @@
-/* CARD */ 
+/* CARD */
 .card {
-    width: 100%;
-    /* --bg: #e8e8e8;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  /* --bg: #e8e8e8;
     --contrast: #e2e0e0;
     --grey: #93a1a1; */
-    position: relative;
-    padding: 9px;
-    /* background-color: var(--bg); */
-    background: royalblue;
+  position: relative;
+  /* padding: 9px; */
+  /* background-color: var(--bg); */
+  background: royalblue;
+  border-radius: 10px;
+  background: url(../imagenes/luz.jpg);
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  margin: 2em auto;
 
- 
-  }
-  
-  .card-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
 
-  }
+}
+
+.card-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 30px 20px;
+  overflow: hidden;
+  width: 60%;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+  /* background-color: var(--contrast); */
+
+  /* Content style */
+  font-size: 15px;
+  font-weight: 100;
+  color: #ffffff;
+  text-align: left;
+
+  background: rgba(0, 0, 0, 0.572);
   
-  .card-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 10px;
-    overflow: hidden;
-    width: 80%;
-    height: auto;
-    /* background-color: var(--contrast); */
-    
-    /* Content style */
-    font-size: 15px;
-    font-weight: 100;
-    color: #ffffff;
-    text-align: center;
-    font-family: monospace;
-    
-  }
+
+
+}
