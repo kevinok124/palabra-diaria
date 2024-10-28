@@ -27,9 +27,7 @@ const RandomItemPicker = () => {
 
   return (
     <div>
-      <button onClick={seleccionarElementoAleatorio}>
-        Obtener elemento aleatorio
-      </button>
+    
       {randomItem && (
         <div>
           <div className="card">
@@ -65,6 +63,11 @@ const RandomItemPicker = () => {
           </div>
         </div>
       )}
+
+      <button onClick={seleccionarElementoAleatorio}>
+        Obtener elemento aleatorio
+      </button>
+      
     </div>
   );
 };
