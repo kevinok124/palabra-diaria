@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './components/button.css';
+import './components/input.css';
+import './components/card.css'
 import App from './App';
 
 
