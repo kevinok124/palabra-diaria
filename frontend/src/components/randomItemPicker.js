@@ -35,7 +35,11 @@ const RandomItemPicker = () => {
             <div className="card-inner">
               {/* Aquí puedes mostrar las propiedades del elemento aleatorio */}
               <p>
+<<<<<<< HEAD
                 <strong>Numero: </strong>
+=======
+                <strong>Número: </strong>
+>>>>>>> 6b59f1673651fd197079999dd5fa164e05b067f6
                 {randomItem.Index}
               </p>
               <p>
@@ -47,11 +51,19 @@ const RandomItemPicker = () => {
                 {randomItem.Book}
               </p>
               <p>
+<<<<<<< HEAD
                 <strong>Numero de libro: </strong>
                 {randomItem.BoookNumber}
               </p>
               <p>
                 <strong>Versiculo: </strong>
+=======
+                <strong>Número de libro: </strong>
+                {randomItem.BoookNumber}
+              </p>
+              <p>
+                <strong>Versículo: </strong>
+>>>>>>> 6b59f1673651fd197079999dd5fa164e05b067f6
                 {randomItem.Verse}
               </p>{" "}
               <p>
