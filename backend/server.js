@@ -1,44 +1,66 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const verseRoutes = require("./routes/verseRoutes");
+require("dotenv").config();
 
-// Configurar variables de entorno
-dotenv.config();
-
-// Inicializar Express
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-// Middleware para parsear JSON
+// Middleware para manejar solicitudes JSON
 app.use(express.json());
 
-// Conectar a MongoDB usando Mongoose
-const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => {
         console.log("✅ Conectado a MongoDB Atlas");
+    })
+    .catch((error) => console.error("❌ Error conectando a la base de datos", error));
+
+// Define el esquema y modelo de Mongoose
+const versiculoSchema = new mongoose.Schema({
+    Index: { type: Number, required: true },
+    Testament: String,
+    Book: String,
+    BookNumber: Number,
+    Verse: Number,
+    Chapter: Number,
+    Text: String,
+    Title: String
+}, { collection: 'todos' }); // Asegúrate de que aquí esté 'versiculos'
+const Versiculo = mongoose.model('Versiculo', versiculoSchema);
+
+// Ruta para obtener todos los versículos (para verificar datos)
+app.get("/", async (req, res) => {
+    try {
+        const versiculos = await Versiculo.find();
+        console.log("Documentos en la colección:", versiculos);
+        res.json(versiculos);
     } catch (error) {
-        console.error("❌ Error conectando a la base de datos", error);
-        process.exit(1); // Detener la aplicación si no se puede conectar
+        res.status(500).json({ error: "Error al obtener los versículos" });
     }
-};
-
-// Llamar a la función para conectar a la base de datos
-connectDB();
-
-// Rutas de la API
-app.use("/api/todos", verseRoutes);
-
-// Ruta principal para verificar el funcionamiento del servidor
-app.get("/", (req, res) => {
-    res.send("Servidor backend funcionando correctamente");
 });
 
-// Escuchar en el puerto definido
-const PORT = process.env.PORT || 5000;
+// Ruta para obtener un versículo por su índice
+app.get("/versiculos/index/:index", async (req, res) => {
+    const index = parseInt(req.params.index);
+    console.log(`Buscando versículo con Index: ${index}`);
+    
+    try {
+        const versiculo = await Versiculo.findOne({ Index: index });
+        console.log(`Resultado de la búsqueda: ${versiculo}`); 
+        
+        if (!versiculo) {
+            return res.status(404).json({ message: "Versículo no encontrado" });
+        }
+        
+        res.json(versiculo);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Error al obtener el versículo" });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
 });
