@@ -1,33 +1,40 @@
 import React, { useState, useEffect } from "react";
-import myData from "../Schema.json";
-
-// const jsonData = [
-//   {Index:10},
-//   {Index:20},
-//   {Index:30},
-//   {Index:40},
-// ];
 
 const RandomItemPicker = () => {
   const [randomItem, setRandomItem] = useState(null);
+  const [data, setData] = useState([]);
 
-  const seleccionarElementoAleatorio = () => {
+  useEffect(() => {
+    // Realizar la solicitud al backend para obtener los datos
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/versiculos");
+        const result = await response.json();
+        setData(result);
+        if (result.length > 0) {
+          seleccionarElementoAleatorio(result);
+        }
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const seleccionarElementoAleatorio = (datos = data) => {
+    if (datos.length === 0) return; // Verificar que datos no esté vacío
     let nuevoElemento;
     do {
-      const randomIndex = Math.floor(Math.random() * myData.length);
-      nuevoElemento = myData[randomIndex];
+      const randomIndex = Math.floor(Math.random() * datos.length);
+      nuevoElemento = datos[randomIndex];
     } while (nuevoElemento === randomItem);
     setRandomItem(nuevoElemento);
   };
 
-  useEffect(() => {
-    seleccionarElementoAleatorio();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <div>
-      <button onClick={seleccionarElementoAleatorio}>
+      <button onClick={() => seleccionarElementoAleatorio()}>
         Obtener elemento aleatorio
       </button>
       {randomItem && (
@@ -35,7 +42,6 @@ const RandomItemPicker = () => {
           <div className="card">
             <div className="card-overlay" />
             <div className="card-inner">
-              {/* Aquí puedes mostrar las propiedades del elemento aleatorio */}
               <p>
                 <strong>Número: </strong>
                 {randomItem.Index}
@@ -55,12 +61,11 @@ const RandomItemPicker = () => {
               <p>
                 <strong>Versículo: </strong>
                 {randomItem.Verse}
-              </p>{" "}
+              </p>
               <p>
                 <strong>Palabra diaria: </strong>
                 {randomItem.Text}
               </p>
-              {/* ... y así sucesivamente */}
             </div>
           </div>
         </div>
