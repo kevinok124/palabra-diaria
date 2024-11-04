@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import myData from "../Schema.json";
+import icono from "../imagenes/boton-de-compartir.png"
+
+
 
 // const jsonData = [
 //   {Index:10},
@@ -58,7 +61,14 @@ const RandomItemPicker = () => {
                 <strong>Palabra diaria: </strong>
                 {randomItem.Text}
               </p>
-              {/* ... y así sucesivamente */}
+             
+            </div>
+            <div className="card-social">
+              
+                <img src={icono}>
+                  
+                </img>
+              
             </div>
           </div>
         </div>
