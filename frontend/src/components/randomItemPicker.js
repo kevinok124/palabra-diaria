@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import myData from "../Schema.json";
-import icono from "../imagenes/boton-de-compartir.png"
-
-
+// import icono from "../imagenes/boton-de-compartir.png"
+import icono2 from "../imagenes/boton.png";
 
 // const jsonData = [
 //   {Index:10},
@@ -25,16 +24,14 @@ const RandomItemPicker = () => {
 
   useEffect(() => {
     seleccionarElementoAleatorio();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div>
-    
       {randomItem && (
         <div>
           <div className="card">
-       
             <div className="card-inner">
               {/* Aquí puedes mostrar las propiedades del elemento aleatorio */}
               <p>
@@ -61,23 +58,17 @@ const RandomItemPicker = () => {
                 <strong>Palabra diaria: </strong>
                 {randomItem.Text}
               </p>
-             
             </div>
             <div className="card-social">
-              
-                <img src={icono}>
-                  
-                </img>
-              
+              <i className="icono">
+                <img src={icono2} alt="icono-compartir"></img>
+              </i>
             </div>
           </div>
         </div>
       )}
 
-      <button onClick={seleccionarElementoAleatorio}>
-        Random
-      </button>
-      
+      <button onClick={seleccionarElementoAleatorio}>Random</button>
     </div>
   );
 };
