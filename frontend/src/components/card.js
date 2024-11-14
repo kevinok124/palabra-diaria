@@ -1,4 +1,4 @@
-import Icono from "../iconos/heart-regular.svg";
+
 const Card = () => {
     return (
        

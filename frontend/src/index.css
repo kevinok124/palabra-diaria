@@ -30,8 +30,8 @@ body {
 /* CONTENEDOR PRINCIPAL */
 
 .contenedor{
-  width: 95vw;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   background: #34ace0;
   
 
@@ -45,6 +45,27 @@ body {
 
 .title {
   color: white;
+
 }
 
+.contenedor_button{
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+button {
+
+  position: fixed;
+  bottom: 5%;
+  right: 30%;
+  left: 30%;
+
+}
 
