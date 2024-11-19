@@ -14,7 +14,9 @@ function App() {
       </div>
       <div className="contenedor_button">    
           <RandomItemPicker data={myData}/>
+
           {/* <ButtonComponent/> */}
+          {/* bloque cerrado */}
       </div>
     </div>
   );

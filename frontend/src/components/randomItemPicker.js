@@ -32,10 +32,10 @@ const RandomItemPicker = () => {
 
 
 
-  
+
   return (
     <div>
-     
+    
       {randomItem && (
         <div>
           <div className="card">
@@ -64,6 +64,7 @@ const RandomItemPicker = () => {
                 <strong>Palabra diaria: </strong>
                 {randomItem.Text}
               </p>
+              {/* ... y así sucesivamente */}
             </div>
           </div>
         </div>
@@ -72,6 +73,7 @@ const RandomItemPicker = () => {
       <button onClick={seleccionarElementoAleatorio}>
         obtener elemento
       </button>
+      
     </div>
   );
 };
